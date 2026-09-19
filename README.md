@@ -1,0 +1,1 @@
+<h1>Querify - AI powered SQL assistant chatbot</h1>

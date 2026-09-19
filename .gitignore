@@ -1,0 +1,78 @@
+# --- Secrets & environment ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Databases & local data ---
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+data/raw/
+data/*.csv
+*.parquet
+
+# --- Vector stores / embeddings / caches ---
+chroma/
+.chroma/
+faiss_index/
+*.faiss
+*.index
+.cache/
+.langchain/
+
+# --- Model files & outputs ---
+models/
+*.bin
+*.pt
+*.safetensors
+outputs/
+logs/
+*.log
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Testing & coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# --- Streamlit / Gradio ---
+.streamlit/secrets.toml
+gradio_cached_examples/
+flagged/
+
+# --- Node (if you add a web frontend) ---
+node_modules/
+
+# --- IDEs & OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
