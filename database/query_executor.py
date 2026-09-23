@@ -1,9 +1,9 @@
 from database.connection import get_connection
 
 
-def execute_query(sql: str):
+def execute_query(sql: str) -> dict:
     """
-    Execute a SQL query and return the results.
+    Execute a SQL query and return column names and rows.
     """
 
     connection = get_connection()
@@ -13,9 +13,13 @@ def execute_query(sql: str):
 
         cursor.execute(sql)
 
-        results = cursor.fetchall()
+        rows = cursor.fetchall()
+        columns = [column[0] for column in cursor.description]
 
-        return results
+        return {
+            "columns": columns,
+            "rows": rows,
+        }
 
     finally:
         cursor.close()
